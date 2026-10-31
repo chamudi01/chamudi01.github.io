@@ -1,12 +1,12 @@
-// EDIT HERE: Replace placeholders with your verified personal details and project links.
+
 export const profile = {
   name: 'Chamudi Bhawanthi',
-  initials: 'CB',
+  initials: 'MS',
   headline: 'Data Science Undergraduate',
   tagline: 'I turn complex data into clear insights and practical solutions.',
   university: 'Sabaragamuwa University of Sri Lanka',
-  location: 'Sri Lanka',
-  email: '', // e.g. 'hello@example.com' — leave blank to hide email action
+  location: 'Kandy, Sri Lanka',
+  email: 'cbhawanthi0227@gmail.com', // e.g. 'hello@example.com' — leave blank to hide email action
   github: 'https://github.com/chamudi01',
   linkedin: 'https://www.linkedin.com/in/chamudi-bhawanthi-04b150316/',
   cvUrl: '', // e.g. '/Chamudi_Bhawanthi_CV.pdf' (put PDF in public/)
