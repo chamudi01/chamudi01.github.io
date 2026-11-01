@@ -2,12 +2,12 @@
 // demo: '' can contain a deployed app or dashboard URL if available.
 const projects = [
   {title:'Credit Risk Intelligence',category:'Machine Learning',subtitle:'Credit risk scoring & financial loss estimation',description:'End-to-end XGBoost credit risk prediction on 30,000 credit card records, including calibrated probabilities, risk tiers and expected financial loss in an interactive Streamlit application.',tags:['Python','XGBoost','Scikit-learn','Streamlit'],metric:'30,000 records',github:'https://github.com/chamudi01/Credit-Risk-Scoring-System',demo:'',color:'violet',icon:'◈'},
-  {title:'Financial News Sentiment Analysis',category:'NLP',subtitle:'Financial text classification with machine learning',description:'Built a three-class NLP sentiment classifier using 3,447 Financial PhraseBank sentences. Compared algorithms and deployed the best Linear SVM model using Gradio.',tags:['NLP','TF-IDF','Linear SVM','Gradio'],metric:'82.90% accuracy',github:'',demo:'',color:'cyan',icon:'✦'},
-  {title:'Bank Customer Churn Prediction',category:'Machine Learning',subtitle:'Predicting customer attrition',description:'Designed a machine learning pipeline using approximately 10,000 bank customer records, with data preprocessing, feature engineering and classification model evaluation.',tags:['Python','Pandas','Scikit-learn','EDA'],metric:'~10K records',github:'',demo:'',color:'pink',icon:'↗'},
-  {title:'Sri Lanka Climate Dashboard',category:'Analytics',subtitle:'Climate trends through business intelligence',description:'Built interactive Power BI dashboards analyzing rainfall, temperature, seasonal patterns and regional differences across Sri Lanka from 2010 to 2023.',tags:['Power BI','DAX','Power Query','Data Visualization'],metric:'2010–2023',github:'',demo:'',color:'cyan',icon:'▥'},
-  {title:'Apple Stock Price Forecasting',category:'Machine Learning',subtitle:'Time-series forecasting with ARIMA & SARIMA',description:'Explored historical Apple stock prices using stationarity tests, ARIMA and SARIMA models, and evaluated forecasting performance with RMSE.',tags:['Python','Statsmodels','ARIMA','SARIMA'],metric:'Time series',github:'',demo:'',color:'violet',icon:'⌁'},
-  {title:'LivManagement',category:'Development',subtitle:'Apartment maintenance management system',description:'Built a role-based Laravel and MySQL application for residents, administrators and repair staff, with service requests, assignments, tracking and feedback.',tags:['Laravel','PHP','MySQL','Blade'],metric:'3 user roles',github:'',demo:'',color:'pink',icon:'⌘'},
-  {title:'Bitcoin Transaction Graph Analysis',category:'Research',subtitle:'Graph-theoretical illicit transaction research',description:'Studied the Elliptic Bitcoin network and compared transaction attributes with degree, PageRank and component-based graph features for illicit transaction detection.',tags:['Graph Theory','NetworkX','XGBoost','Research'],metric:'203K+ nodes',github:'',demo:'',color:'violet',icon:'◎'},
+  {title:'Financial News Sentiment Analysis',category:'NLP',subtitle:'Financial text classification with machine learning',description:'Built a three-class NLP sentiment classifier using 3,447 Financial PhraseBank sentences. Compared algorithms and deployed the best Linear SVM model using Gradio.',tags:['NLP','TF-IDF','Linear SVM','Gradio'],metric:'82.90% accuracy',github:'https://github.com/chamudi01/financial-news-sentiment-analysis',demo:'',color:'cyan',icon:'✦'},
+  {title:'Bank Customer Churn Prediction',category:'Machine Learning',subtitle:'Predicting customer attrition',description:'Designed a machine learning pipeline using approximately 10,000 bank customer records, with data preprocessing, feature engineering and classification model evaluation.',tags:['Python','Pandas','Scikit-learn','EDA'],metric:'~10K records',github:'https://github.com/chamudi01/bank-churn-prediction',demo:'',color:'pink',icon:'↗'},
+  {title:'Sri Lanka Climate Dashboard',category:'Analytics',subtitle:'Climate trends through business intelligence',description:'Built interactive Power BI dashboards analyzing rainfall, temperature, seasonal patterns and regional differences across Sri Lanka from 2010 to 2023.',tags:['Power BI','DAX','Power Query','Data Visualization'],metric:'2010–2023',github:'',linkedin: 'https://lnkd.in/p/g2btCh9k', demo:'',color:'cyan',icon:'▥'},
+  {title:'Apple Stock Price Forecasting',category:'Machine Learning',subtitle:'Time-series forecasting with ARIMA & SARIMA',description:'Explored historical Apple stock prices using stationarity tests, ARIMA and SARIMA models, and evaluated forecasting performance with RMSE.',tags:['Python','Statsmodels','ARIMA','SARIMA'],metric:'Time series',github:'https://github.com/chamudi01/Apple_Stock_Price_Forecasting',demo:'',color:'violet',icon:'⌁'},
+  {title:'LivManagement',category:'Development',subtitle:'Apartment maintenance management system',description:'Built a role-based Laravel and MySQL application for residents, administrators and repair staff, with service requests, assignments, tracking and feedback.',tags:['Laravel','PHP','MySQL','Blade'],metric:'3 user roles',github:'https://github.com/chamudi01/livmanagement-system',demo:'',color:'pink',icon:'⌘'},
+  {title:'Bitcoin Transaction Graph Analysis',category:'Research',subtitle:'Graph-theoretical illicit transaction research',description:'Studied the Elliptic Bitcoin network and compared transaction attributes with degree, PageRank and component-based graph features for illicit transaction detection.',tags:['Graph Theory','NetworkX','XGBoost','Research'],metric:'203K+ nodes',github:'https://github.com/chamudi01/Bitcoin_AML_Graph_Research',demo:'',color:'violet',icon:'◎'},
   {title:'RetailIQ — E-commerce Analytics',category:'Analytics',subtitle:'Business insights from Brazilian e-commerce',description:'An evolving analytics project using the Olist dataset to study sales, customer behavior, order fulfillment and business performance.',tags:['Python','Pandas','SQL','Analytics'],metric:'In progress',github:'',demo:'',color:'cyan',icon:'▤'}
 ];
 const grid=document.getElementById('project-grid');
@@ -36,8 +36,28 @@ function renderProjects(category='All'){
       a.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-.99-.02-1.94-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.16 1.18A11 11 0 0 1 12 6.1c.98 0 1.97.13 2.89.39 2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.42-2.68 5.4-5.24 5.69.41.35.77 1.03.77 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg><span>View on GitHub</span><span aria-hidden="true">↗</span>`;
       links.append(a);
     }
+    if (p.linkedin) {
+  const a = document.createElement('a');
+
+  a.href = p.linkedin;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.className = 'github-link';
+
+  a.innerHTML = `
+    <svg viewBox="0 0 24 24" width="19" height="19"
+         fill="currentColor" aria-hidden="true">
+      <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52zM7.93 18.75H4.98V9.2h2.95v9.55zM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42zM18.75 18.75H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.35-1.53 2.78-1.53 2.97 0 3.59 1.95 3.59 4.49v5.29z"/>
+    </svg>
+    <span>View on LinkedIn</span>
+    <span aria-hidden="true">↗</span>
+  `;
+
+  links.append(a);
+}
+
     if(p.demo){const a=document.createElement('a');a.href=p.demo;a.target='_blank';a.rel='noopener noreferrer';a.className='demo-link';a.textContent='Live demo ↗';links.append(a)}
-    if(!p.github&&!p.demo){const s=document.createElement('span');s.textContent='Project links coming soon';s.className='muted';links.append(s)}
+    if (!p.github && !p.linkedin && !p.demo) {const s=document.createElement('span');s.textContent='Project links coming soon';s.className='muted';links.append(s)}
     body.append(eyebrow,title,subtitle,desc,tags,links);card.append(top,body);grid.append(card);
     if (typeof revealObserver !== "undefined" && revealObserver) observeReveal(card);
   });
